@@ -12,10 +12,13 @@ body{
     background-position: bottom;
 }
 
-.container{
-    min-height: 100dvh;
-    width: 100%;
-    background-color: rgba(255, 250, 237, 0.4);
+.container {
+  min-height: 100vh;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  background-color: rgba(255, 250, 237, 0.4);
+  text-align: center;
 }
 
 .pageTitle{
