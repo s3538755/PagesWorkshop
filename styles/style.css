@@ -22,8 +22,18 @@ body{
 }
 
 .pageTitle{
-    padding-top: 50px;
-    text-align: center;
+  margin: 0 0 10px;
+}
+
+.pageSubtitle{
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+
+.pageTagline{
+  max-width: 650px;
+  margin: 0 auto 25px;
+  line-height: 1.6;
 }
 
 .resourceContainer{
