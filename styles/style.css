@@ -295,3 +295,48 @@ body::before {
   height: 420px;
   border: none;
 }
+
+/* ===== HERO HEADER (Centered Spline) ===== */
+.heroHeader{
+  width: 100%;
+  padding: 30px 16px 10px;
+}
+
+.heroInner{
+  max-width: 1200px;   /* widen the header area */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers everything */
+  gap: 14px;
+}
+
+/* This controls the orb size (WIDEN + HEIGHT) */
+.heroOrbWrap{
+  width: min(1200px, 100%); /* widen: change 1100px to 1200px if you want bigger */
+  height: 520px;            /* make taller if you want more “hero” feel */
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.heroOrb{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.heroCtas{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Mobile tweaks */
+@media (max-width: 700px){
+  .heroOrbWrap{
+    height: 320px;
+    width: 100%;
+  }
+}
