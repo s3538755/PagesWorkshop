@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IT Help Desk Troubleshooting Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>IT Help Desk Troubleshooting Simulator</h1>
+      <p>Select an issue and follow the steps like a real support workflow.</p>
+    </header>
+
+    <section class="card">
+      <label for="issue"><strong>Choose an issue:</strong></label>
+      <select id="issue">
+        <option value="wifi">Wi-Fi not connecting</option>
+        <option value="slow">Computer running slow</option>
+        <option value="login">Can’t log in</option>
+        <option value="printer">Printer not printing</option>
+      </select>
+
+      <div class="btn-row">
+        <button id="startBtn">Start Troubleshooting</button>
+        <button id="resetBtn" class="secondary" disabled>Reset</button>
+      </div>
+    </section>
+
+    <section class="card" id="simCard" hidden>
+      <h2 id="issueTitle"></h2>
+
+      <div class="step">
+        <div class="step-meta">
+          <span id="stepCount"></span>
+        </div>
+        <p id="stepText"></p>
+      </div>
+
+      <div class="btn-row">
+        <button id="backBtn" class="secondary" disabled>Back</button>
+        <button id="nextBtn">Next</button>
+      </div>
+
+      <div class="result" id="resultBox" hidden>
+        <h3>Resolution</h3>
+        <p id="resolutionText"></p>
+
+        <h3>What this demonstrates</h3>
+        <ul>
+          <li>Structured troubleshooting (isolate → test → resolve)</li>
+          <li>Clear communication for non-technical users</li>
+          <li>Documented, repeatable support steps</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <small>Built with HTML, CSS, and JavaScript • Deployed on GitHub Pages</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
