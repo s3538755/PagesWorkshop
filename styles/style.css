@@ -147,9 +147,8 @@ body::before {
   /* makes every card equal height + button pinned to bottom */
   display: flex;
   flex-direction: column;
-}
 
-.project {
+  /* smooth hover animation */
   transition: transform 240ms ease, box-shadow 240ms ease;
 }
 
@@ -222,6 +221,7 @@ body::before {
   box-shadow: none !important;
 }
 
+/* Fade-in on scroll (matches script.js adding "reveal" and "show") */
 .reveal {
   opacity: 0;
   transform: translateY(16px);
