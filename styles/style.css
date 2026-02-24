@@ -12,6 +12,25 @@ body{
     background-position: bottom;
 }
 
+/* ===== Neon gradient overlay & smooth motion ===== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    radial-gradient(1200px 800px at 20% 10%, rgba(168, 85, 247, 0.22), transparent 60%),
+    radial-gradient(1000px 700px at 80% 30%, rgba(34, 211, 238, 0.18), transparent 55%),
+    radial-gradient(900px 600px at 50% 90%, rgba(236, 72, 153, 0.18), transparent 55%);
+}
+
 .container {
   min-height: 100vh;
   max-width: 1100px;
@@ -130,6 +149,18 @@ body{
   flex-direction: column;
 }
 
+.project {
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 0 1px rgba(168, 85, 247, 0.25),
+    0 20px 60px rgba(0, 0, 0, 0.55),
+    0 0 40px rgba(168, 85, 247, 0.25);
+}
+
 .projectTitle {
   text-align: center;
   text-decoration: underline;
@@ -190,3 +221,15 @@ body{
   transform: none !important;
   box-shadow: none !important;
 }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
