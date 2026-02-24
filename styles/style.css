@@ -103,70 +103,94 @@ body{
     box-shadow: 3px 3px 0 black;
 }
 
-.projectsContainer{
-    max-width: 1520px;
-    margin: 0 auto;
-    padding: 50px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
+.projectsContainer {
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 24px;
+  justify-content: center;
+
+  /* THIS is what fixes the bottoms lining up */
+  align-items: stretch;
 }
 
-.project{
-    max-width: 300px;
-    margin: 20px 0;
-}
-
-.projectTitle{
-    text-align: center;
-    text-decoration: underline;
-    margin-bottom: 5px;
-}
-
-.projectLink{
-    max-width: 250px;
-}
-
-.projectImage{
-    width: 100%;
-}
-
-/* ===== Featured Project (Project #1) ===== */
-
-.featured-project{
+.project {
+  /* consistent sizing across all cards */
+  width: 320px;
   background: rgba(255, 255, 255, 0.85);
   border: 2px solid black;
   border-radius: 18px;
   padding: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+
+  /* makes every card equal height + button pinned to bottom */
+  display: flex;
+  flex-direction: column;
 }
 
-.featured-project:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0,0,0,0.28);
-}
-
-.featured-project .projectTitle{
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-decoration: none;          /* removes underline for featured title */
-  border-bottom: 2px solid black; /* gives a clean divider */
-  padding-bottom: 6px;
+.projectTitle {
+  text-align: center;
+  text-decoration: underline;
   margin-bottom: 10px;
 }
 
-.featured-project .projectImage{
+.projectLink {
+  display: block;
+}
+
+.projectImage {
+  width: 100%;
   border-radius: 14px;
-  transition: transform 0.3s ease;
 }
 
-.featured-project:hover .projectImage{
-  transform: scale(1.03);
-}
-
-.featured-project .projectDescription{
+.projectDescription {
   margin-top: 12px;
   line-height: 1.5;
+  flex-grow: 1; /* pushes button down so all buttons align */
+}
+
+/* Button styling */
+.projectBtn {
+  display: inline-block;
+  text-align: center;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border: 2px solid black;
+  border-radius: 999px;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  background: transparent;
+}
+
+.projectBtn:hover {
+  background: black;
+  color: white;
+}
+
+.projectBtn.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+  border-style: dashed;
+}
+
+/* Keep featured hover effect, but do NOT change sizing */
+.featured-project {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featured-project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
+}
+
+/* Optional: mobile friendly */
+@media (max-width: 1000px) {
+  .project {
+    width: min(360px, 92vw);
+  }
 }
