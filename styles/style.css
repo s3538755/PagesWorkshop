@@ -131,3 +131,42 @@ body{
 .projectImage{
     width: 100%;
 }
+
+/* ===== Featured Project (Project #1) ===== */
+
+.featured-project{
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid black;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featured-project:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.28);
+}
+
+.featured-project .projectTitle{
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;          /* removes underline for featured title */
+  border-bottom: 2px solid black; /* gives a clean divider */
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+
+.featured-project .projectImage{
+  border-radius: 14px;
+  transition: transform 0.3s ease;
+}
+
+.featured-project:hover .projectImage{
+  transform: scale(1.03);
+}
+
+.featured-project .projectDescription{
+  margin-top: 12px;
+  line-height: 1.5;
+}
