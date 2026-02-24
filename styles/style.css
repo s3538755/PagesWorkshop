@@ -109,13 +109,11 @@ body{
   padding: 50px 0;
 
   display: flex;
-  flex-wrap: wrap;
-
-  gap: 24px;
+  flex-wrap: nowrap;        /* keep all 3 on same row */
+  gap: 40px;
   justify-content: center;
 
-  /* THIS is what fixes the bottoms lining up */
-  align-items: stretch;
+  align-items: flex-start;  /* 🔥 forces them straight across */
 }
 
 .project {
@@ -151,6 +149,7 @@ body{
   margin-top: 12px;
   line-height: 1.5;
   flex-grow: 1; /* pushes button down so all buttons align */
+  text-align: center;
 }
 
 /* Button styling */
@@ -178,19 +177,16 @@ body{
   border-style: dashed;
 }
 
-/* Keep featured hover effect, but do NOT change sizing */
+/* REMOVE the featured "card" look entirely so Project 1 matches */
 .featured-project {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  transform: none !important;
 }
 
+/* IMPORTANT: do NOT lift or shadow on hover */
 .featured-project:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.28);
-}
-
-/* Optional: mobile friendly */
-@media (max-width: 1000px) {
-  .project {
-    width: min(360px, 92vw);
-  }
+  transform: none !important;
+  box-shadow: none !important;
 }
