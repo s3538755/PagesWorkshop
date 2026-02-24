@@ -233,3 +233,48 @@ body::before {
   transform: translateY(0);
 }
 
+/* ===== HERO + SPLINE EMBED (paste at VERY BOTTOM of style.css) ===== */
+
+.hero{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.heroText{
+  flex: 1;
+  text-align: left;
+}
+
+.hero3d{
+  flex: 1;
+  min-height: 520px;         /* controls how tall the Spline area is */
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.hero3d iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* Mobile stacking */
+@media (max-width: 900px){
+  .hero{
+    flex-direction: column;
+    text-align: center;
+  }
+  .heroText{
+    text-align: center;
+  }
+  .hero3d{
+    width: 100%;
+    min-height: 420px;
+  }
+}
