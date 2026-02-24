@@ -340,3 +340,16 @@ body::before {
     width: 100%;
   }
 }
+
+/* Top-center buttons inside the main container */
+.resumeTop,
+.projectsTop {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+/* If your resume button still looks weird, force it to behave like a button */
+#resumeDownload {
+  display: inline-block;
+}
