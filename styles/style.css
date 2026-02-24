@@ -313,7 +313,7 @@ body::before {
 
 /* This controls the orb size (WIDEN + HEIGHT) */
 .heroOrbWrap{
-  width: min(1200px, 100%); /* widen: change 1100px to 1200px if you want bigger */
+  width: min(1050px, 100%); /* widen: change 1100px to 1200px if you want bigger */
   height: 520px;            /* make taller if you want more “hero” feel */
   overflow: hidden;
   border-radius: 18px;
