@@ -1,0 +1,74 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+.app {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header h1 { margin: 0 0 8px; }
+.header p { margin: 0 0 18px; }
+
+.card {
+  border: 1px solid #333;
+  border-radius: 14px;
+  padding: 16px;
+  margin: 14px 0;
+  background: rgba(255,255,255,0.75);
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 14px;
+  border-radius: 10px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: transparent;
+}
+
+.step {
+  margin-top: 10px;
+}
+
+.step-meta {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.result {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px dashed #333;
+}
+
+.footer {
+  margin-top: 18px;
+  opacity: 0.8;
+}
